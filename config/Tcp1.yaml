@@ -14,7 +14,7 @@
     publish_stale_data: False
 
     topics:
-      - "/MyDefaultTopic"
+      - "/jetsonTCPout"
 
     subscribe_namespace: "/tcp1"
     publish_namespace: "/tcp1"
