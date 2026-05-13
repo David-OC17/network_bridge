@@ -302,7 +302,7 @@ void NetworkBridge::receive_data(std::span<const uint8_t> data)
     qos.reliable();
 
     // Set QoS to Transient Local Durability
-    qos.transient_local();
+    qos.durability_volatile();
     publishers_[topic] = this->create_generic_publisher(
       publish_namespace_ + topic, type, qos);
     RCLCPP_INFO(
