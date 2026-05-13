@@ -16,13 +16,13 @@
 
     UdpInterface:
       # This machines local IP (e.g. on LAN, VPN, etc)
-      local_address: "127.0.0.1" #e.g. 10.8.0.1
+      local_address: "192.168.1.2" #e.g. 10.8.0.1
 
       # Desired receive port (must be send port of remote)
       receive_port: 5000
 
       # Remote's IP address
-      remote_address: "127.0.0.1" #e.g. 10.8.0.2
+      remote_address: "192.168.1.3" #e.g. 10.8.0.2
 
       # Desired send port (must be receive port of remote)
       send_port: 5001
@@ -51,11 +51,10 @@
 
     # List all topics that are to be sent over the network interface
     topics:
-      - "/MyDefaultTopic"
-      - "/MySpecialTopic"
+      - "/cmd_vel"
 
     # Defaults can be overridden for all topics
-    /MySpecialTopic:
+    /cmd_vel:
       rate: 2.0
       zstd_level: 5
 

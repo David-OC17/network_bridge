@@ -15,7 +15,9 @@
     publish_stale_data: False
 
     topics:
-      - "/jetsonTCPin"
+      - "/wheel_odom"
+      - "/ekf/odom"
+      
 
-    subscribe_namespace: "/tcp2"
-    publish_namespace: "/tcp2"
+    subscribe_namespace: ""
+    publish_namespace: ""
